@@ -1,4 +1,4 @@
-#include <c_cpp_template/sample_library.hpp>
+#include <learn_cpp/sample_library.hpp>
 #include <catch2/catch_test_macros.hpp>
 
 TEST_CASE( "Factorials are computed with constexpr", "[factorial]" ) {

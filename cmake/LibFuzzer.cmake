@@ -1,4 +1,4 @@
-function(c_cpp_template_check_libfuzzer_support var_name)
+function(learn_cpp_check_libfuzzer_support var_name)
   set(LibFuzzerTestSource
       "
 #include <cstdint>

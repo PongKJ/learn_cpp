@@ -5,8 +5,8 @@ find_package(jsoncpp REQUIRED)
 find_package(dbg-macro REQUIRED)
 find_package(CLI11 REQUIRED)
 
-target_link_libraries(json_parser PRIVATE c_cpp_template::c_cpp_template_options
-                                          c_cpp_template::c_cpp_template_warnings)
+target_link_libraries(json_parser PRIVATE learn_cpp::learn_cpp_options
+                                          learn_cpp::learn_cpp_warnings)
 target_link_system_libraries(
   json_parser
   PRIVATE

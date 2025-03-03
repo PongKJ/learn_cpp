@@ -1,4 +1,4 @@
-macro(c_cpp_template_enable_ipo)
+macro(learn_cpp_enable_ipo)
   include(CheckIPOSupported)
   check_ipo_supported(RESULT result OUTPUT output)
   if(result)

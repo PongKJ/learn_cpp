@@ -27,8 +27,8 @@ int main( [[maybe_unused]] int argc, [[maybe_unused]] char* argv[] ) {
     std::map< int, int > myMap;
     dbg( "hello world" );
     std::queue< Person > que;
-    CLI::App app{ fmt::format( "{} version {}", c_cpp_template::cmake::project_name,
-                               c_cpp_template::cmake::project_version ) };
+    CLI::App app{ fmt::format( "{} version {}", learn_cpp::cmake::project_name,
+                               learn_cpp::cmake::project_version ) };
     bool show_version = false;
     try {
         app.add_flag( "-v,--version", show_version, "show version" );

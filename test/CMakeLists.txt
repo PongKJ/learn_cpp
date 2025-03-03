@@ -7,9 +7,9 @@ project(CmakeConfigPackageTests LANGUAGES CXX)
 if(PROJECT_IS_TOP_LEVEL OR TEST_INSTALLED_VERSION)
   enable_testing()
 
-  find_package(c_cpp_template CONFIG REQUIRED) # for intro, project_options, ...
+  find_package(learn_cpp CONFIG REQUIRED) # for intro, project_options, ...
 
-  if(NOT TARGET c_cpp_template_options)
+  if(NOT TARGET learn_cpp_options)
     message(FATAL_ERROR "Required config package not found!")
     return() # be strictly paranoid for Template Janitor github action! CK
   endif()
@@ -33,9 +33,9 @@ set_tests_properties(cli.version_matches PROPERTIES PASS_REGULAR_EXPRESSION "${P
 add_executable(tests tests.cpp)
 target_link_libraries(
   tests
-  PRIVATE c_cpp_template::c_cpp_template_warnings
-          c_cpp_template::c_cpp_template_options
-          c_cpp_template::sample_library
+  PRIVATE learn_cpp::learn_cpp_warnings
+          learn_cpp::learn_cpp_options
+          learn_cpp::sample_library
           Catch2::Catch2WithMain)
 
 if(WIN32 AND BUILD_SHARED_LIBS)
@@ -65,9 +65,9 @@ catch_discover_tests(
 add_executable(constexpr_tests constexpr_tests.cpp)
 target_link_libraries(
   constexpr_tests
-  PRIVATE c_cpp_template::c_cpp_template_warnings
-          c_cpp_template::c_cpp_template_options
-          c_cpp_template::sample_library
+  PRIVATE learn_cpp::learn_cpp_warnings
+          learn_cpp::learn_cpp_options
+          learn_cpp::sample_library
           Catch2::Catch2WithMain)
 
 catch_discover_tests(
@@ -88,9 +88,9 @@ catch_discover_tests(
 add_executable(relaxed_constexpr_tests constexpr_tests.cpp)
 target_link_libraries(
   relaxed_constexpr_tests
-  PRIVATE c_cpp_template::c_cpp_template_warnings
-          c_cpp_template::c_cpp_template_options
-          c_cpp_template::sample_library
+  PRIVATE learn_cpp::learn_cpp_warnings
+          learn_cpp::learn_cpp_options
+          learn_cpp::sample_library
           Catch2::Catch2WithMain)
 target_compile_definitions(relaxed_constexpr_tests PRIVATE -DCATCH_CONFIG_RUNTIME_STATIC_REQUIRE)
 

@@ -1,5 +1,5 @@
 function(
-  c_cpp_template_enable_sanitizers
+  learn_cpp_enable_sanitizers
   project_name
   ENABLE_SANITIZER_ADDRESS
   ENABLE_SANITIZER_LEAK
